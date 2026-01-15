@@ -236,7 +236,7 @@ python 3.detetConver.py \
 
 ## 📊 结果解读 (Interpretation)
 
-结果文件 (`final_report.txt`) 包含多列数据，以下是关键列的生物学含义及**完全/部分置换**的区分方法。
+结果文件 (`final_report.txt`) 包含多列数据，每一行代表一个“基因四联子”（Quartet）的分析结果。
 
 ### 1. 关键列说明
 
@@ -299,6 +299,7 @@ python 3.detetConver.py \
 
 
 本流程脚本遵循 MIT 协议。如果您在研究中使用了此流程，请保留脚本头部说明。
+
 
 
 
