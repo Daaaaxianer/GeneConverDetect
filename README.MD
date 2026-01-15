@@ -222,7 +222,6 @@ python 2.extractGeneQuartets.py \
 目标：计算 Ka/Ks 并输出最终判定结果。 (注：这里假设您的 CDS 序列文件名为 Lso.cds.fasta 和 Lma.cds.fasta，请根据实际文件名修改 -a 和 -b 参数)
 
 ```Bash
-
 python 3.detetConver.py \
   -q "Lso_Lma.quartet" \
   -a "Lso.cds.fasta" \
@@ -230,7 +229,9 @@ python 3.detetConver.py \
   -o "Lso_Lma.P.CV.PaPs.txt" \
   --boot 100
 ```
+
 结果：生成文件 `Lso_Lma.P.CV.PaPs.txt`
+
 ------
 
 ## 📊 结果解读 (Interpretation)
@@ -298,5 +299,6 @@ python 3.detetConver.py \
 
 
 本流程脚本遵循 MIT 协议。如果您在研究中使用了此流程，请保留脚本头部说明。
+
 
 
