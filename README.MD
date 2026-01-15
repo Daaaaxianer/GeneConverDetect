@@ -191,6 +191,44 @@ python 3.detetConver.py \
 ```
 
 ------
+### 实际范例
+
+数据可从release处下载
+
+步骤 1：筛选直系同源基因
+目标：从共线性 Block 文件中提取特定染色体（如1号和11号）的直系同源对。
+
+Bash
+
+python 1.filterOrthlogs.py \
+  -i "Lso_Lma.block.rr.txt" \
+  -c "1,1;11,11"
+结果：生成文件 Lso_Lma.block.rr.txt.pseu.ortologs
+
+步骤 2：构建四联子列表
+目标：结合上一步生成的直系同源文件和旁系同源文件，组装四联子。
+
+Bash
+
+python 2.extractGeneQuartets.py \
+  -o "Lso_Lma.block.rr.txt.pseu.ortologs" \
+  -p "Lso.v.Lso.paralog" \
+  -out "Lso_Lma.quartet"
+结果：生成文件 Lso_Lma.quartet
+
+步骤 3：检测基因置换
+目标：计算 Ka/Ks 并输出最终判定结果。 (注：这里假设您的 CDS 序列文件名为 Lso.cds.fasta 和 Lma.cds.fasta，请根据实际文件名修改 -a 和 -b 参数)
+
+Bash
+
+python 3.detetConver.py \
+  -q "Lso_Lma.quartet" \
+  -a "Lso.cds.fasta" \
+  -b "Lma.cds.fasta" \
+  -o "Lso_Lma.P.CV.PaPs.txt" \
+  --boot 100
+结果：生成文件 Lso_Lma.P.CV.PaPs.txt
+------
 
 ## 📊 结果解读 (Interpretation)
 
@@ -257,3 +295,4 @@ python 3.detetConver.py \
 
 
 本流程脚本遵循 MIT 协议。如果您在研究中使用了此流程，请保留脚本头部说明。
+
