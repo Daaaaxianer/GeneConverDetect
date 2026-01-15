@@ -47,7 +47,7 @@ pip install biopython argparse
 
 脚本: 1.filterOrthlogs.py
 
-功能: 从共线性分析结果（如 MCScanX 输出的 .block 文件）中，提取特定染色体对的直系同源基因。
+功能: 从共线性分析结果（如 ColinearrScan或MCScanX 输出的 .block 文件）中，提取特定染色体对的直系同源基因。
 
 #### 📖 参数说明
 
@@ -254,5 +254,6 @@ python 3.detetConver.py \
 ------
 
 ## 📜 引用与协议
+
 
 本流程脚本遵循 MIT 协议。如果您在研究中使用了此流程，请保留脚本头部说明。
