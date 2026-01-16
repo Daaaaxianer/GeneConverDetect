@@ -50,9 +50,7 @@ pip install biopython argparse
 Bash
 
 ```
-python 1.filterOrthlogs.py \
-  -i "Lso_Lma.block.rr.txt" \
-  -c "1,1;11,11"
+python 1.filterOrthlogs.py -i "Lso_Lma.block.rr.txt" -c "1,1;11,11"
 ```
 
 > **结果**：生成文件 `Lso_Lma.block.rr.txt.pseu.ortologs`
@@ -66,10 +64,7 @@ python 1.filterOrthlogs.py \
 Bash
 
 ```
-python 2.extractGeneQuartets.py \
-  -o "Lso_Lma.block.rr.txt.pseu.ortologs" \
-  -p "Lso.v.Lso.paralog" \
-  -out "Lso_Lma.quartet"
+python 2.extractGeneQuartets.py -o "Lso_Lma.block.rr.txt.pseu.ortologs" -p "Lso.v.Lso.paralog" -out "Lso_Lma.quartet"
 ```
 
 > **结果**：生成文件 `Lso_Lma.quartet`
@@ -83,12 +78,7 @@ python 2.extractGeneQuartets.py \
 Bash
 
 ```
-python 3.detetConver.py \
-  -q "Lso_Lma.quartet" \
-  -a "Lso.cds.fasta" \
-  -b "Lma.cds.fasta" \
-  -o "Lso_Lma.P.CV.PaPs.txt" \
-  --boot 100
+python 3.detetConver.py -q "Lso_Lma.quartet" -a "Lso.cds.fasta" -b "Lma.cds.fasta" -o "Lso_Lma.P.CV.PaPs.txt" --boot 100
 ```
 
 > **结果**：生成文件 `Lso_Lma.P.CV.PaPs.txt`
@@ -327,6 +317,7 @@ python 3.detetConver.py \
 
 
 本流程脚本遵循 MIT 协议。如果您在研究中使用了此流程，请保留脚本头部说明。
+
 
 
 
